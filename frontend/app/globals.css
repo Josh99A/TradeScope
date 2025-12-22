@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
+} */
+
+:root {
+  --bg-main: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --text-main: #0F172A;
 }
 
-@theme inline {
+@theme {
+  /* Brand */
+  --color-ts-primary: #1E6FFF;
+  --color-ts-accent: #5B6CFF;
+
+  /* Backgrounds */
+  --color-ts-bg-main: #0B1220;
+  --color-ts-bg-card: #111A2E;
+  --color-ts-border: #1F2A44;
+
+  /* Text */
+  --color-ts-text-main: #E6ECF5;
+  --color-ts-text-muted: #8A94A6;
+
+  /* Trading Actions */
+  --color-ts-success: #16C784;
+  --color-ts-danger: #EA3943;
+  --color-ts-warning: #F0B90B;
+
+  /* Charts */
+  --color-ts-candle-up: #16C784;
+  --color-ts-candle-down: #EA3943;
+  --color-ts-grid: #1C2541;
+}
+
+.dark {
+  --bg-main: #0B1220;
+  --bg-card: #111A2E;
+  --text-main: #E6ECF5;
+}
+
+
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+}@
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */

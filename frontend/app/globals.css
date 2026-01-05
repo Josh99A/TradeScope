@@ -1,64 +1,97 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-} */
-
-:root {
-  --bg-main: #F8FAFC;
-  --bg-card: #FFFFFF;
-  --text-main: #0F172A;
-}
-
+/* ========== DESIGN TOKENS ========== */
 @theme {
-  /* Brand */
-  --color-ts-primary: #1E6FFF;
-  --color-ts-accent: #5B6CFF;
-
-  /* Backgrounds */
-  --color-ts-bg-main: #0B1220;
-  --color-ts-bg-card: #111A2E;
-  --color-ts-border: #1F2A44;
+  /* Core backgrounds */
+  --color-ts-bg-main: var(--ts-bg-main);
+  --color-ts-bg-card: var(--ts-bg-card);
 
   /* Text */
-  --color-ts-text-main: #E6ECF5;
-  --color-ts-text-muted: #8A94A6;
+  --color-ts-text-main: var(--ts-text-main);
+  --color-ts-text-muted: var(--ts-text-muted);
 
-  /* Trading Actions */
-  --color-ts-success: #16C784;
-  --color-ts-danger: #EA3943;
-  --color-ts-warning: #F0B90B;
+  /* Borders */
+  --color-ts-border: var(--ts-border);
+
+  /* Brand */
+  --color-ts-primary: var(--ts-primary);
+  --color-ts-accent: var(--ts-accent);
+
+  /* Trading actions */
+  --color-ts-success: var(--ts-success);
+  --color-ts-danger: var(--ts-danger);
+  --color-ts-warning: var(--ts-warning);
 
   /* Charts */
-  --color-ts-candle-up: #16C784;
-  --color-ts-candle-down: #EA3943;
-  --color-ts-grid: #1C2541;
+  --color-ts-candle-up: var(--ts-candle-up);
+  --color-ts-candle-down: var(--ts-candle-down);
+  --color-ts-grid: var(--ts-grid);
 }
 
+
+/* ========== LIGHT MODE ========== */
+:root {
+  /* Backgrounds */
+  --ts-bg-main: #F8FAFC;
+  --ts-bg-card: #FFFFFF;
+
+  /* Text */
+  --ts-text-main: #0F172A;
+  --ts-text-muted: #64748B;
+
+  /* Borders */
+  --ts-border: #E2E8F0;
+
+  /* Brand */
+  --ts-primary: #1E6FFF;
+  --ts-accent: #5B6CFF;
+
+  /* Trading */
+  --ts-success: #16C784;
+  --ts-danger: #EA3943;
+  --ts-warning: #F0B90B;
+
+  /* Charts */
+  --ts-candle-up: #16C784;
+  --ts-candle-down: #EA3943;
+  --ts-grid: #E5E7EB;
+}
+
+
+/* ========== DARK MODE ========== */
 .dark {
-  --bg-main: #0B1220;
-  --bg-card: #111A2E;
-  --text-main: #E6ECF5;
+  /* Backgrounds */
+  --ts-bg-main: #0B1220;
+  --ts-bg-card: #111A2E;
+
+  /* Text */
+  --ts-text-main: #E6ECF5;
+  --ts-text-muted: #8A94A6;
+
+  /* Borders */
+  --ts-border: #1F2A44;
+
+  /* Brand */
+  --ts-primary: #1E6FFF;
+  --ts-accent: #5B6CFF;
+
+  /* Trading */
+  --ts-success: #16C784;
+  --ts-danger: #EA3943;
+  --ts-warning: #F0B90B;
+
+  /* Charts */
+  --ts-candle-up: #16C784;
+  --ts-candle-down: #EA3943;
+  --ts-grid: #1C2541;
 }
 
 
-/* @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-} */
-
-/* media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ========== BASE ========== */
+@layer base {
+  body {
+    @apply bg-ts-bg-main text-ts-text-main antialiased;
   }
-}@
+}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-} */

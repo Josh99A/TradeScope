@@ -1,5 +1,5 @@
 import Sidebar from "./Sidebar";
-import TopNav from "./Topbar";
+import Topbar from "./Topbar";
 import SideNav from "../navigation/SideNav";
 
 export default function AppShell({
